@@ -3,40 +3,52 @@
 * {
   box-sizing: border-box;
   font-family: "JetBrains Mono", monospace;
-  border-radius: 5px;
+  border-radius: 4px;
 }
 
 body {
-    background: #7de072;
+  background: #aeffa2;
 }
 
 th {
-    font-size: 25px;
-    font-weight: bold;
+  font-size: 14px;
+  font-weight: bold;
 }
 
 button {
-    font-weight: bold;
-    background: #ccc;
-    width: 100%;
+  /* font-weight: bold; */
+  background: #ccc;
+  width: 100%;
+  border: 1px solid black;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.title {
+  text-align: center;
 }
 
 .delete {
-    width: 26px;
-    height: 26px;
-    align-self: center;
-    background: #aaa;
-    margin: 5px;
+  width: 26px;
+  height: 26px;
+  align-self: center;
+  background: #aaa;
+  margin: 4px;
+  padding: 1px;
 }
 
 .clear {
-    margin: 7px;
-    width: auto;
+  margin: 8px;
+  width: auto;
 }
 
 .outline {
-    border: 7px solid black;
-    margin: -12px;
+  border: 8px solid black;
+  margin: -12px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .row {
@@ -45,7 +57,7 @@ button {
 
 .column {
   flex: 50%;
-  padding: 5px;
+  padding: 6px;
 }
 
 table {

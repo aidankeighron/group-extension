@@ -18,19 +18,18 @@ function addToTable(name, tableID) {
       }
     }
     var row = table.insertRow(-1);
-    button = '<button id="'+name+tableID+'">'+(name.length<=15?name:name.substring(0,14)+"&hellip;")+'</button>'
+    button = '<button id="'+name+tableID+'">'+(name.length<=15?name:name.substring(0, 14)+"&hellip;")+"</button>";
     if (tableID == "loadTable") {
-      deleteButton = '<button class="delete" id="btn'+name+tableID+'">&#10006;</button>'
-      row.insertCell(0).innerHTML = '<td><div class="row">'+button+deleteButton+'</div></td>';
+      deleteButton = '<button class="delete" id="btn'+name+tableID+'">&#10006;</button>';
+      row.insertCell(0).innerHTML = '<td><div class="row">'+button+deleteButton+"</div></td>";
       document.getElementById("btn"+name+tableID).addEventListener("click", () => {
-        document.getElementById(name+tableID).remove();
-        document.getElementById("btn"+name+tableID).remove();
-      });
+          document.getElementById(name+tableID).remove();
+          document.getElementById("btn"+name+tableID).remove();
+        });
+    } else {
+      row.insertCell(0).innerHTML = "<td>"+button+"</td>";
     }
-    else {
-      row.insertCell(0).innerHTML = '<td>'+button+'</td>';
-    }
-    document.getElementById(name+tableID).addEventListener("click", () => {
+    document.getElementById(name + tableID).addEventListener("click", () => {
       if (tableID == "loadTable") {
         loadGroup(name);
       } else {
@@ -38,13 +37,12 @@ function addToTable(name, tableID) {
       }
     });
   } catch (error) {
-    // alert("Error");
     console.log(error);
   }
 }
 
 function refreshUI() {
-  console.log("Refreshing UI")
+  console.log("Refreshing UI");
   chrome.tabGroups.query({}, function (groups) {
     groups.forEach(function (group) {
       addToTable(group.title, "saveTable");
@@ -84,10 +82,7 @@ function loadGroup(groupName) {
                   chrome.tabGroups.query(
                     { title: groupName, collapsed: false },
                     function (group) {
-                      chrome.tabs.group({
-                        tabIds: [tab.id],
-                        groupId: group[0].id,
-                      });
+                      chrome.tabs.group({tabIds: [tab.id],groupId: group[0].id});
                     }
                   );
                 }
@@ -101,7 +96,7 @@ function loadGroup(groupName) {
 }
 
 function clearSave() {
-  console.log("Clearing Save")
+  console.log("Clearing Save");
   chrome.bookmarks.getTree(function (rootNode) {
     rootNode[0].children[0].children.forEach(function (folder) {
       if (folder.title == "GroupExtension") {
@@ -131,11 +126,7 @@ function saveGroup(groupName) {
               { parentId: folder.id, title: groupName },
               function (newFolder) {
                 tabs.forEach(function (tab) {
-                  chrome.bookmarks.create({
-                    parentId: newFolder.id,
-                    title: tab.title,
-                    url: tab.url,
-                  });
+                  chrome.bookmarks.create({parentId: newFolder.id,title: tab.title,url: tab.url});
                 });
               }
             );
