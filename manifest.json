@@ -1,9 +1,9 @@
 {
     "name": "Group Management",
     "permissions": [
-        "bookmarks",
         "tabs",
-        "tabGroups"
+        "tabGroups",
+        "storage"
       ],
     "version": "1.0.0",
     "description": "Manage the saving and loading of tab groups",

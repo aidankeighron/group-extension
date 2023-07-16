@@ -4,7 +4,7 @@ This a google chrome extension created to help transfer tab data across devices.
 
 # How to use
 
-When you click on the extension it opens a popup allowing you to select a group to save or load. On the load table you will see a list of every group that is currently active (even groups in other windows) selecting any of the groups will save them to your "GroupExtension" folder (if the folder does not exist a new one will be created). All saved groups will appear in load. Clicking any of them will load the saved group in your current window. Clicking the X next to each load button will delete that respective groups save data. Clear will delete all saved groups.
+When you click on the extension it opens a popup allowing you to select a group to save or load. The save table shows a list of all the current groups (even groups in other windows), pressing one of the buttons will save the corresponding group. Clicking any of the buttons in the load table will load that saved group. The X next to each load button will delete that group. Pressing the clear button will remove all saved groups.
 
 # How to install
 
