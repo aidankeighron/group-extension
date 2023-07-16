@@ -18,7 +18,7 @@ function addToTable(name, tableID) {
       }
     }
     var row = table.insertRow(-1);
-    // row.id = number+"queue";
+    // add delete button
     row.insertCell(0).innerHTML =
       '<td><button id="' + name + tableID + '">'+(name.length<=15?name:name.substring(0,14)+"&hellip;")+"</button></td>";
     document.getElementById(name + tableID).addEventListener("click", () => {
@@ -106,6 +106,7 @@ function clearSave() {
 }
 
 function saveGroup(groupName) {
+  // TODO use google sync
   console.log("Saving Group: " + groupName);
   chrome.tabGroups.query({ title: groupName }, function (group) {
     chrome.tabs.query({ groupId: group[0].id }, function (tabs) {
