@@ -18,10 +18,19 @@ function addToTable(name, tableID) {
       }
     }
     var row = table.insertRow(-1);
-    // add delete button
-    row.insertCell(0).innerHTML =
-      '<td><button id="' + name + tableID + '">'+(name.length<=15?name:name.substring(0,14)+"&hellip;")+"</button></td>";
-    document.getElementById(name + tableID).addEventListener("click", () => {
+    button = '<button id="'+name+tableID+'">'+(name.length<=15?name:name.substring(0,14)+"&hellip;")+'</button>'
+    if (tableID == "loadTable") {
+      deleteButton = '<button class="delete" id="btn'+name+tableID+'">&#10006;</button>'
+      row.insertCell(0).innerHTML = '<td><div class="row">'+button+deleteButton+'</div></td>';
+      document.getElementById("btn"+name+tableID).addEventListener("click", () => {
+        document.getElementById(name+tableID).remove();
+        document.getElementById("btn"+name+tableID).remove();
+      });
+    }
+    else {
+      row.insertCell(0).innerHTML = '<td>'+button+'</td>';
+    }
+    document.getElementById(name+tableID).addEventListener("click", () => {
       if (tableID == "loadTable") {
         loadGroup(name);
       } else {

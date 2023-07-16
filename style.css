@@ -3,7 +3,7 @@
 * {
   box-sizing: border-box;
   font-family: "JetBrains Mono", monospace;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 body {
@@ -11,18 +11,26 @@ body {
 }
 
 th {
-    font-size: 20px;
+    font-size: 25px;
     font-weight: bold;
 }
 
 button {
     font-weight: bold;
-    /* width: 110px; */
+    background: #ccc;
     width: 100%;
 }
 
-.clear {
+.delete {
+    width: 26px;
+    height: 26px;
+    align-self: center;
+    background: #aaa;
     margin: 5px;
+}
+
+.clear {
+    margin: 7px;
     width: auto;
 }
 
