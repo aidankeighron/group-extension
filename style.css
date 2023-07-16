@@ -17,14 +17,18 @@ th {
 
 button {
     font-weight: bold;
+    /* width: 110px; */
+    width: 100%;
 }
 
 .clear {
     margin: 5px;
+    width: auto;
 }
 
 .outline {
-    border: 5px solid black;
+    border: 7px solid black;
+    margin: -12px;
 }
 
 .row {
@@ -39,7 +43,8 @@ button {
 table {
   border-collapse: collapse;
   border-spacing: 0;
-  width: 100%;
+  /* width: 100%; */
+  width: 100px;
   border: none;
 }
 

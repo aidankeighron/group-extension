@@ -20,7 +20,7 @@ function addToTable(name, tableID) {
     var row = table.insertRow(-1);
     // row.id = number+"queue";
     row.insertCell(0).innerHTML =
-      '<td><button id="' + name + tableID + '">' + name + "</button></td>";
+      '<td><button id="' + name + tableID + '">'+(name.length<=15?name:name.substring(0,14)+"&hellip;")+"</button></td>";
     document.getElementById(name + tableID).addEventListener("click", () => {
       if (tableID == "loadTable") {
         loadGroup(name);
@@ -53,7 +53,7 @@ function refreshUI() {
   });
 }
 
-async function loadGroup(groupName) {
+function loadGroup(groupName) {
   console.log("Loading Group:" + groupName);
   chrome.tabs.create(
     { url: "https:\\asana.com", active: false },
@@ -68,7 +68,7 @@ async function loadGroup(groupName) {
       if (folder.title == "GroupExtension") {
         folder.children.forEach(function (group) {
           if (group.title == groupName) {
-            group.children.forEach(async function (site) {
+            group.children.forEach(function (site) {
               chrome.tabs.create(
                 { url: site.url, active: false },
                 function (tab) {
@@ -99,10 +99,10 @@ function clearSave() {
         folder.children.forEach(function (group) {
           chrome.bookmarks.removeTree(group.id);
         });
+        document.getElementById("loadTable").innerHTML = '<table id="loadTable" border="2px solid black"><th>Load</th></table>';
       }
     });
   });
-  refreshUI();
 }
 
 function saveGroup(groupName) {
@@ -134,5 +134,5 @@ function saveGroup(groupName) {
       });
     });
   });
-  refreshUI();
+  setTimeout(refreshUI, 100);
 }
