@@ -1,0 +1,16 @@
+{
+    "name": "Group Management",
+    "permissions": [
+        "bookmarks",
+        "tabs",
+        "tabGroups"
+      ],
+    "version": "1.0.0",
+    "description": "Manage the saving and loading of groups",
+    "manifest_version": 3,
+    "author": "Aidan Keighron",
+    "action":{
+        "default_popup": "index.html",
+        "default_title": "Group Management"
+    }
+}
