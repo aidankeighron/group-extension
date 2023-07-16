@@ -4,7 +4,11 @@
         "tabs",
         "tabGroups",
         "storage"
-      ],
+    ],
+    "icons": {
+        "128": "icon128.jpg",
+        "512": "icon.jpg"
+    },
     "version": "1.0.0",
     "description": "Manage the saving and loading of tab groups",
     "manifest_version": 3,
