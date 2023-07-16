@@ -3,11 +3,54 @@
     <head>
         <title>Group Management Extension</title>
         <meta charset="utf-8">
+        <style>
+            * {
+              box-sizing: border-box;
+            }
+            
+            .row {
+              display: flex;
+              margin-left:-5px;
+              margin-right:-5px;
+            }
+            
+            .column {
+              flex: 50%;
+              padding: 5px;
+            }
+            
+            table {
+              border-collapse: collapse;
+              border-spacing: 0;
+              width: 100%;
+              border: 1px solid #ddd;
+            }
+            
+            th, td {
+              text-align: left;
+              padding: 16px;
+            }
+            
+            tr:nth-child(even) {
+              background-color: #f2f2f2;
+            }
+        </style>
     </head>
     <body>
-        <p id="test">Test Button</p>
-        <button id="load">Load</button>
-        <button id="save">Save</button>
+        <div class="row">
+            <div class="column">
+            <table id="loadTable" border="2px solid black">
+                <th>Load</th>   
+            </table>
+            </div>
+            <div class="column">
+
+            <table id="saveTable" border="2px solid black">
+                <th>Save</th>         
+            </table>
+            </div>
+        </div>
+        <button id="clear">Clear</button>
         <script src="group.js"></script>
     </body>
 </html>
