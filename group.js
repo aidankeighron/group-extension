@@ -26,6 +26,7 @@ function addToTable(name, tableID) {
     document.getElementById("btn"+name+tableID).addEventListener("click", () => {
         document.getElementById(name+tableID).remove();
         document.getElementById("btn"+name+tableID).remove();
+        chrome.storage.sync.remove(name);
       });
   } else {
     row.insertCell(0).innerHTML = "<td>"+button+"</td>";
