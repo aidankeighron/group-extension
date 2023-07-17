@@ -25,6 +25,17 @@ function addToTable(name, tableID) {
       document.getElementById("btn"+name+tableID).addEventListener("click", () => {
           document.getElementById(name+tableID).remove();
           document.getElementById("btn"+name+tableID).remove();
+          chrome.bookmarks.getTree(function (rootNode) {
+            rootNode[0].children[0].children.forEach(function (folder) {
+              if (folder.title == "GroupExtension") {
+                folder.children.forEach(function (group) {
+                  if (group.title == name) {
+                    chrome.bookmarks.removeTree(group.id);
+                  }
+                });
+              }
+            });
+          });
         });
     } else {
       row.insertCell(0).innerHTML = "<td>"+button+"</td>";
