@@ -6,8 +6,8 @@
         "storage"
     ],
     "icons": {
-        "128": "icon128.jpg",
-        "512": "icon.jpg"
+        "128": "icon128.png",
+        "512": "icon.png"
     },
     "version": "1.0.0",
     "description": "Manage the saving and loading of tab groups",
