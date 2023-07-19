@@ -5,7 +5,7 @@ refreshUI();
 console.log("Loading Done")
 
 function addToTable(name, tableID) {
-  var table = document.getElementById(tableID);
+  const table = document.getElementById(tableID);
   for (let i in table.rows) {
     let row = table.rows[i];
     for (let j in row.cells) {
@@ -18,10 +18,10 @@ function addToTable(name, tableID) {
       } catch (error) {}
     }
   }
-  var row = table.insertRow(-1);
-  button = '<button id="'+name+tableID+'">'+(name.length<=15?name:name.substring(0, 14)+"&hellip;")+"</button>";
+  const row = table.insertRow(-1);
+  const button = '<button id="'+name+tableID+'">'+(name.length<=15?name:name.substring(0, 14)+"&hellip;")+"</button>";
   if (tableID == "loadTable") {
-    deleteButton = '<button class="delete" id="btn'+name+tableID+'">&#10006;</button>';
+    const deleteButton = '<button class="delete" id="btn'+name+tableID+'">&#10006;</button>';
     row.insertCell(0).innerHTML = '<td><div class="row">'+button+deleteButton+"</div></td>";
     document.getElementById("btn"+name+tableID).addEventListener("click", () => {
         document.getElementById(name+tableID).remove();

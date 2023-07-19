@@ -7,12 +7,18 @@
 }
 
 body {
-  background: #aeffa2;
+  background: #257E23;
+  padding: 5px;
 }
 
 th {
-  font-size: 14px;
-  font-weight: bold;
+  /* font-size: 14px; */
+  /* font-weight: bold; */
+  color: #000;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
 }
 
 button {
@@ -22,33 +28,61 @@ button {
   border: 1px solid black;
   padding-top: 4px;
   padding-bottom: 4px;
+  border-radius: 15px 0px 15px 0px;
 }
 
 .title {
   text-align: center;
+  color: #000;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  vertical-align: middle;
+  padding: 18px 0;
+  background: #49B447;
+  height: 80px;
+  margin: 0px;
+  border-radius: 20px 20px 0 0;
 }
 
 .delete {
-  width: 26px;
-  height: 26px;
+  width: 24px;
+  height: 20px;
   align-self: center;
   background: #aaa;
   margin: 4px;
-  padding: 1px;
+  padding: 0px;
+  /* margin-left: auto;
+  margin-right: auto; */
+  /* padding: 2px; */
+  border-radius: 50%;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.delete:hover {
+  transform: rotate(90deg);
+  animation-duration: 1s;
+  transition: all 0.3s ease-in-out 0s;
 }
 
 .clear {
-  margin: 8px;
+  margin: 12px;
   width: auto;
+  border-radius: 20px;
+}
+
+.clearbox {
+  margin: 0;
+  background: #56CB54;
+  border-radius: 40px;
 }
 
 .outline {
-  border: 8px solid black;
-  margin: -12px;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  background: #56CB54;
+  border-radius: 20px;
+  margin: -5px;
+  border: 1px solid black;
 }
 
 .row {
@@ -61,11 +95,14 @@ button {
 }
 
 table {
+  background: #56CB54;
   border-collapse: collapse;
   border-spacing: 0;
   /* width: 100%; */
   width: 100px;
+  padding-top: 100%;
   border: none;
+  margin: 5px;
 }
 
 th,
