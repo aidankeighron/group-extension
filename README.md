@@ -1,6 +1,6 @@
 # Group Extension
  
-This a google chrome extension created to help transfer tab data across devices. Google has a feature where you can group tabs together (you can create a group by right-clicking on a tab and selecting "Add tab to group"). I use this feature heavily and I often have many groups each with a set of tabs related to the group name. When I switch from my laptop to my desktop or any other computer I have to re-open all of the grouped tabs which can take a while and is an overall hassle. So I made this extension to help with that.
+This a google chrome extension was created to help transfer tab data across devices. Google has a feature where you can group tabs together (you can create a group by right-clicking on a tab and selecting "Add tab to group"). I use this feature heavily and I often have many groups each with a set of tabs related to the group name. When I switch from my laptop to my desktop or any other computer I have to re-open all of the grouped tabs which can take a while and is an overall hassle. So I made this extension to help with that.
 
 # How to use
 
