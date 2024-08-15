@@ -12,7 +12,7 @@
         "24": "images/image24.png",
         "16": "images/image16.png"
     },
-    "version": "2.0.0",
+    "version": "3",
     "description": "Manage the saving and loading of tab groups",
     "manifest_version": 3,
     "author": "Aidan Keighron",
