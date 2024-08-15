@@ -25,10 +25,9 @@ button {
   /* font-weight: bold; */
   background: #ccc;
   width: 100%;
-  border: 1px solid black;
+  border: none;
   padding-top: 4px;
   padding-bottom: 4px;
-  border-radius: 15px 0px 15px 0px;
 }
 
 .title {
@@ -53,23 +52,12 @@ button {
   background: #aaa;
   margin: 4px;
   padding: 0px;
-  /* margin-left: auto;
-  margin-right: auto; */
-  /* padding: 2px; */
   border-radius: 50%;
-  transition: all 0.3s ease-in-out 0s;
-}
-
-.delete:hover {
-  transform: rotate(90deg);
-  animation-duration: 1s;
-  transition: all 0.3s ease-in-out 0s;
 }
 
 .clear {
   margin: 12px;
   width: auto;
-  border-radius: 20px;
 }
 
 .clearbox {
@@ -82,7 +70,6 @@ button {
   background: #56CB54;
   border-radius: 20px;
   margin: -5px;
-  border: 1px solid black;
 }
 
 .row {
@@ -95,12 +82,9 @@ button {
 }
 
 table {
-  background: #56CB54;
   border-collapse: collapse;
   border-spacing: 0;
-  /* width: 100%; */
   width: 100px;
-  padding-top: 100%;
   border: none;
   margin: 5px;
 }
